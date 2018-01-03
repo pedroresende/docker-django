@@ -1,2 +1,5 @@
  Django==2.0
- psycopg2
+ django-tinymce4-lite
+ django-bootstrap4
+ mysqlclient
+ gunicorn

@@ -2,13 +2,30 @@ version: '3'
 
 services:
   db:
-    image: postgres
-  web:
+    image: mysql/mysql-server:latest
+    environment:
+      - MYSQL_DATABASE=django
+      - MYSQL_ROOT_PASSWORD=django
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
+  python:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
-    ports:
-      - "${WEB_HOST}:8000"
+    expose:
+      - 8000
     depends_on:
       - db
+  nginx:
+    build: build/nginx
+    volumes:
+      - .:/code
+    ports:
+        - '${WEB_HOST}:80'
+    depends_on:
+        - python
+        - db

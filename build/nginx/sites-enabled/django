@@ -1,0 +1,12 @@
+server {
+    server_name localhost;
+
+    location /static/ {
+        autoindex off;
+        alias /code/blog/static/;
+    }
+
+    location / {
+        proxy_pass http://python:8000;
+    }
+}

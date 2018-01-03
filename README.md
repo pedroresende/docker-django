@@ -16,11 +16,12 @@ $ docker-compose run web django-admin.py startproject composeexample .
 ```
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django',
+        'USER': 'root',
+        'PASSWORD': 'django'
         'HOST': 'db',
-        'PORT': 5432,
+        'PORT': 3306,
     }
 }
 ```
