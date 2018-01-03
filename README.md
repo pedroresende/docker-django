@@ -4,7 +4,7 @@
 
 ```
 $ docker-compose build
-$ docker-compose run web django-admin.py startproject composeexample .
+$ docker-compose run python django-admin.py startproject composeexample .
 ```
 
 ### Database Configuration
