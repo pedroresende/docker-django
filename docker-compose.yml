@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    image: mysql/mysql-server:latest
+    image: mysql/mysql-server:5.7
     environment:
       - MYSQL_DATABASE=django
       - MYSQL_ROOT_PASSWORD=django
