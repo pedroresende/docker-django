@@ -11,7 +11,15 @@ $ docker-compose run python django-admin.py startproject composeexample .
 
 1. In your project directory, edit the composeexample/settings.py file.
 
-2. Replace the DATABASES = ... with the following:
+2. Replace the ALLOWED_HOSTS by
+
+```
+ALLOWED_HOSTS = ['*']
+```
+
+in order to allow connections from the guest O.S.
+
+3. Replace the DATABASES = ... with the following:
 
 ```
 DATABASES = {
