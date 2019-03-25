@@ -4,11 +4,11 @@ services:
   db:
     image: mysql/mysql-server:5.7
     environment:
-      - MYSQL_DATABASE=django
-      - MYSQL_ROOT_PASSWORD=django
+      - MYSQL_DATABASE=${MYSQL_DB_NAME}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_ROOT_HOST=%
     ports:
-      - "3307:3306"
+      - "${MYSQL_PORT}:3306"
     volumes:
       - ./mysql:/var/lib/mysql
   python:

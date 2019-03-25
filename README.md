@@ -5,6 +5,7 @@
 ```
 $ docker-compose build
 $ docker-compose run python django-admin.py startproject composeexample .
+$ docker-compose up -d
 ```
 
 ### Database Configuration
@@ -33,4 +34,5 @@ DATABASES = {
     }
 }
 ```
+4. Finally access to in your browser to `http://localhost:8000`
 
