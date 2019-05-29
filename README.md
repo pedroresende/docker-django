@@ -34,5 +34,11 @@ DATABASES = {
     }
 }
 ```
-4. Finally access to in your browser to `http://localhost:8000`
 
+4. Add the following to the end of the file
+
+```
+STATIC_ROOT = '/code/static/'
+```
+
+5. Finally access to in your browser to `http://localhost:8000`

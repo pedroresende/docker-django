@@ -3,7 +3,7 @@ server {
 
     location /static/ {
         autoindex off;
-        alias /code/blog/static/;
+        alias /code/static/;
     }
 
     location / {
